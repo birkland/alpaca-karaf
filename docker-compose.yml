@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+    fcrepo-connector:
+        env_file: .env
+        build: connector-indexing-fcrepo
+        image: karaf-test/connector-fcrepo
+
+    fits-connector:
+        env_file: .env
+        build: connector-derivative-fits
+        image: karaf-test/connector-fits
+
+    homarus-connector:
+        env_file: .env
+        build: connector-derivative-homarus
+        image: karaf-test/connector-homarus
+
+    houdini-connector:
+        env_file: .env
+        build: connector-derivative-houdini
+        image: karaf-test/connector-houdini
+    
+    ocr-connector:
+        env_file: .env
+        build: connector-derivative-ocr
+        image: karaf-test/connector-ocr
+
+    triplestore-connector:
+        env_file: .env
+        build: connector-indexing-triplestore
+        image: karaf-test/connector-triplestore
+    
+    activemq:
+        image: oapass/activemq:20180618
+        env_file: .env
+        ports:
+          - "8161:8161"
+
+
