@@ -3,7 +3,7 @@ version: "3.7"
 services:
     alpaca-connector:
         env_file: .env
-        build: karaf-base
+        build: .
         image: karaf-test/alpaca-connector
     
     activemq:
