@@ -8,11 +8,11 @@
        http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
-  <cm:property-placeholder id="properties" persistent-id="ca.islandora.alpaca.connector.houdini" update-strategy="reload" >
+  <cm:property-placeholder id="properties" persistent-id="ca.islandora.alpaca.connector.fits" update-strategy="reload" >
     <cm:default-properties>
       <cm:property name="error.maxRedeliveries" value="5"/>
-      <cm:property name="in.stream" value="activemq:queue:islandora-connector-houdini"/>
-      <cm:property name="derivative.service.url" value="http://localhost:8000/houdini/convert"/>
+      <cm:property name="in.stream" value="direct:nothing"/>
+      <cm:property name="derivative.service.url" value="http://example.org/changeme"/>
     </cm:default-properties>
   </cm:property-placeholder>
 
@@ -21,7 +21,7 @@
   <bean id="http" class="org.apache.camel.component.http4.HttpComponent"/>
   <bean id="https" class="org.apache.camel.component.http4.HttpComponent"/>
 
-  <camelContext id="IslandoraConnectorHoudini" xmlns="http://camel.apache.org/schema/blueprint">
+  <camelContext id="IslandoraConnectorFits" xmlns="http://camel.apache.org/schema/blueprint">
     <package>ca.islandora.alpaca.connector.derivative</package>
   </camelContext>
 
