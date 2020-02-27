@@ -4,7 +4,7 @@ services:
     alpaca-connector:
         env_file: .env
         build: .
-        image: karaf-test/alpaca-connector
+        image: birkland/isle-alpaca
     
     activemq:
         image: oapass/activemq:20180618
