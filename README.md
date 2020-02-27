@@ -24,7 +24,7 @@ Take a look at the environment variables in `.env`
 
 Require environment variables include:
 * ACTIVEMQ_URL - ActiveMQ connection URI
-* ACTIVEMQ_USERNAME - Username for connecting to ActiveMQ
+* ACTIVEMQ_USER - Username for connecting to ActiveMQ
 * ACTIVEMQ_PASSWORD - Password for connecting to ActiveMQ.
 * ALPACA_HTTP_TOKEN - Token for authenticating via JWT with secure Islandora services
 

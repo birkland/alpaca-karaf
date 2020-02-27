@@ -7,7 +7,7 @@ services:
         image: birkland/isle-alpaca
     
     activemq:
-        image: oapass/activemq:20180618
+        image: oapass/activemq:20200219
         env_file: .env
         ports:
           - "8161:8161"
